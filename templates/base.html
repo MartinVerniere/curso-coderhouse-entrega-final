@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <title>{% block title %}{% endblock %}</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-dark bg-dark">
+      <div class="d-flex w-100 align-items-center">
+        <ul class="navbar-nav flex-row">
+          <li class="nav-item">
+            <a class="nav-link text-white px-3" href="{% url 'a' %}">A</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white px-3" href="{% url 'b' %}">B</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white px-3" href="{% url 'c' %}">C</a>
+          </li>
+        </ul>
+    
+        <ul class="navbar-nav flex-row ml-auto">
+          {% if user.is_authenticated %}
+            <li class="nav-item">
+              <a class="nav-link text-white px-3" href="{% url 'profile' %}">
+                {% if user.avatar.image %}
+                  <img src="{{ user.avatar.image.url }}" alt="Avatar" class="rounded-circle" width="30" height="30">
+                {% endif %} {{ user.username }}
+              </a>
+            </li>
+            <li class="nav-item">
+              <form action="{% url 'profile_logout' %}" method="POST">
+                {% csrf_token %}
+                <button type="submit" class="nav-link text-white px-3">Logout</button>
+              </form>
+            </li>
+          {% else %}
+            <li class="nav-item">
+              <a class="nav-link text-white px-3" href="{% url 'profile_login' %}">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white px-3" href="{% url 'profile_create' %}">Registrarse</a>
+            </li>
+          {% endif %}
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+      {% block content %}{% endblock %}
+    </div>
+  </body>
+</html>

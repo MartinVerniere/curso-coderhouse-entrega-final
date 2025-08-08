@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+
+{% block title %}Crear Perfil{% endblock %}
+
+
+{% block content %}
+  <div class="container d-flex justify-content-center align-items-center min-vh-100">
+    <div class="card shadow w-100">
+      <div class="card-body">
+        <h2 class="card-title text-center mb-4">Crear Perfil</h2>
+        <form method="post" enctype="multipart/form-data">
+          {% csrf_token %}
+          <table class="table table-borderless mb-4">
+            {{ form.as_table }}
+            {{ avatar_form.as_table }}
+          </table>
+          <button type="submit" class="btn btn-primary w-100">Guardar Cambios</button>
+        </form>
+      </div>
+    </div>
+  </div>
+{% endblock %}
