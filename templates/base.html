@@ -1,8 +1,8 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
+    <!-- Required meta tags -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
@@ -15,13 +15,16 @@
       <div class="d-flex w-100 align-items-center">
         <ul class="navbar-nav flex-row">
           <li class="nav-item">
-            <a class="nav-link text-white px-3" href="{% url 'a' %}">A</a>
+            <a class="nav-link text-white px-3" href="{% url 'home' %}">Inicio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white px-3" href="{% url 'b' %}">B</a>
+            <a class="nav-link text-white px-3" href="{% url 'vehicle_list' %}">Vehiculos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white px-3" href="{% url 'c' %}">C</a>
+            <a class="nav-link text-white px-3" href="{% url 'vehicle_create' %}">Crear vehiculo</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white px-3" href="{% url 'about_me' %}">About Me</a>
           </li>
         </ul>
     

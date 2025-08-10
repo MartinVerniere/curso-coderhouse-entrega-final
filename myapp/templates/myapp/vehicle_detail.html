@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Detalles vehiculo
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1 class="text-center">Detalles del vehiculo</h1>
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">{{ vehicle.marca }} - {{ vehicle.modelo }}</h5>
+            <p class="card-text">Fecha de creacion: {{ vehicle.fecha_creacion }}</p>
+            <p class="card-text">Descripcion: {{ vehicle.descripcion }}</p>
+            <a href="{% url 'vehicle_list' %}" class="btn btn-primary">Volver</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

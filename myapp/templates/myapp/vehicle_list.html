@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Lista de vehiculos
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="d-flex justify-content-between align-items-center my-3">
+        <form action="{% url 'vehicle_list' %}" method="GET" class="form-inline w-100">
+            <div class="input-group w-100">
+                <input type="text" name="search" class="form-control" placeholder="Buscar modelo...">
+                <div class="input-group-append">
+                    <button type="submit" class="btn btn-primary">Buscar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+  
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>Marca</th>
+                    <th>Modelo</th>
+                    <th>Fecha de creacion</th>
+                    <th>Descripcion</th>
+                    <th>Accion</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for vehicle in vehicles %}
+                <tr>
+                    <td>{{ vehicle.marca }}</td>
+                    <td>{{ vehicle.modelo }}</td>
+                    <td>{{ vehicle.fecha_creacion }}</td>
+                    <td>{{ vehicle.descripcion }}</td>
+                    <td>
+                        <a href="{% url 'vehicle_details' vehicle.id %}" class="btn btn-sm btn-info">Ver detalles</a>
+                        <a href="{% url 'vehicle_update' vehicle.id %}" class="btn btn-sm btn-warning">Actualizar</a>
+                        <a href="{% url 'vehicle_delete' vehicle.id %}" class="btn btn-sm btn-danger">Borrar</a>
+                    </td>
+                </tr>
+                {% empty %}
+                <tr>
+                    <td colspan="5" class="text-center btn-warning">
+                        No hay vehículos existentes
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <a href="{% url 'vehicle_create' %}" class="btn btn-primary">Añadir Vehiculo</a>
+</div>
+{% endblock %}
