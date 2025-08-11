@@ -3,5 +3,29 @@
 {% block title %}Home{% endblock %}
 
 {% block content %}
-    <h1>Bienvenido a la pagina de listado de vehiculos</h1>
+<div class="d-flex align-items-center" style="height: calc(100vh - 56px);">
+  <div class="row w-100">
+    <div class="col-lg-6 mb-4 mb-lg-0 d-flex flex-column justify-content-center">
+      <h1 class="display-4 fw-bold mb-3">Bienvenido a la página de vehículos</h1>
+      <p class="lead text-muted mb-4">
+        Administra, consulta y gestiona la información de tus vehículos de manera rápida y sencilla.
+        Crea nuevos registros, actualiza datos o visualiza todos los detalles en un solo lugar.
+      </p>
+      <div>
+        <a href="{% url 'vehicle_list' %}" class="btn btn-primary btn-lg me-2">
+          Ver listado de vehículos
+        </a>
+        <a href="{% url 'vehicle_create' %}" class="btn btn-outline-secondary btn-lg">
+          Añadir un vehículo
+        </a>
+      </div>
+    </div>
+
+    <div class="col-lg-6 d-flex align-items-center justify-content-center">
+      <div class="bg-light border rounded shadow-sm p-5 ratio ratio-4x3 w-100">
+        <span class="text-muted">Imagen o gráfico relacionado con vehículos</span>
+      </div>
+    </div>
+  </div>
+</div>
 {% endblock %}

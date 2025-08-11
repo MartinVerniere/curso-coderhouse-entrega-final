@@ -1,8 +1,11 @@
 from django.shortcuts import render
 from django.urls import reverse_lazy
+from django.db.models import Q
+from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
+from django.contrib.auth.mixins import LoginRequiredMixin
 from .forms import VehicleForm
 from .models import Vehicle
-from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
+
 
 # Create your views here.
 class VehicleListView(ListView):
@@ -13,7 +16,7 @@ class VehicleListView(ListView):
         super().get_queryset()
         search = self.request.GET.get('search', None)
         if search:
-            return Vehicle.objects.filter(modelo__icontains=search)
+            return Vehicle.objects.filter(Q(marca__icontains=search) | Q(modelo__icontains=search))
         return Vehicle.objects.all()
     
 class VehicleCreateView(CreateView):
