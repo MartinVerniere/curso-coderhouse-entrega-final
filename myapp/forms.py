@@ -1,7 +1,10 @@
 from django import forms
 from .models import Vehicle
+from ckeditor.widgets import CKEditorWidget
 
 class VehicleForm(forms.ModelForm):
+    descripcion = forms.CharField(widget=CKEditorWidget())
+
     class Meta:
         model = Vehicle
         fields = ['marca', 'modelo', 'descripcion','imagen', 'fecha_creacion']

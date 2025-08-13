@@ -34,7 +34,7 @@
                     <td>{{ vehicle.marca }}</td>
                     <td>{{ vehicle.modelo }}</td>
                     <td>{{ vehicle.fecha_creacion }}</td>
-                    <td>{{ vehicle.descripcion }}</td>
+                    <td>{{ vehicle.descripcion|safe }}</td>
                     <td>
                         <a href="{% url 'vehicle_details' vehicle.id %}" class="btn btn-sm btn-info">Ver detalles</a>
                         <a href="{% url 'vehicle_update' vehicle.id %}" class="btn btn-sm btn-warning">Actualizar</a>
