@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
+from django.contrib.auth import update_session_auth_hash
 from django.contrib.auth.views import LoginView, LogoutView
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
@@ -62,10 +63,13 @@ def profile_update(request):
 
 
         if form.is_valid() and avatar_form.is_valid():
-            form.save()
+            user = form.save()
+
             avatar_instance = avatar_form.save(commit=False)
             avatar_instance.user = request.user
             avatar_instance.save()
+
+            update_session_auth_hash(request, user)
             return redirect('profile')
     else:
         form = EditProfileForm(instance=request.user)

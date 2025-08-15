@@ -15,6 +15,12 @@ class CreateProfileForm(UserCreationForm):
         }    
 
 class EditProfileForm(UserChangeForm):
+    password = forms.CharField(
+        label="Password",
+        required=True,
+        widget=forms.PasswordInput
+    )
+
     class Meta:
         model = User
         fields = ('first_name', 'last_name', 'username', 'email')
@@ -24,6 +30,13 @@ class EditProfileForm(UserChangeForm):
             'email': 'Email',
             'username': 'Nombre de Usuario',
         }
+
+    def save(self, commit=True):
+        user = super().save(commit=False)
+        user.set_password(self.cleaned_data['password'])
+        if commit:
+            user.save()
+        return user
 
 class AvatarForm(forms.ModelForm):
     class Meta:
