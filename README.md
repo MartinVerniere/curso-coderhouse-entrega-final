@@ -2,7 +2,7 @@
 Este es el proyecto final realizado para el curso de Python en Coderhouse.
 
 ## Pasos para ejecutar el proyecto
-- Obtener el archivo desde el repositorio en Github()
+- Obtener el archivo desde el repositorio en Github(https://github.com/MartinVerniere/curso-coderhouse-entrega-final)
 
 - Estando parados en la carpeta principal del proyecto (donde se encuentran "myapp" y "Entrega Final"), ejecutar el comando "./myenv/scripts/Activate"
 
@@ -39,3 +39,4 @@ Este es el proyecto final realizado para el curso de Python en Coderhouse.
 
 ## Adicionales
 - Por como esta realizado el formulario de creacion/actualizacion, la imagen cargada no se podra ver en ese momento, sino que se actualizara cuando se guarden los cambios y se quiera ver la imagen en detalles o actualizar.
+- Por como esta realizado el formulario de editar perfil, si se quiere cambiar alguno de los datos del usuario, se debe volver a reescribir la contraseña a utilizar (o si se quiere se puede editarla tambien), el campo no puede quedar vacio en el formulario.

@@ -1,25 +1,29 @@
 {% extends 'base.html' %}
 
-{% block title %}About me{% endblock %}
+{% block title %}About Me{% endblock %}
 
 {% block content %}
-<div class="card shadow-sm border-0 mt-4">
-    <div class="card-body">
-        <h1 class="card-title mb-4">About Me</h1>
-
-        <p class="lead">
+<div class="card shadow-lg border-0 rounded-3 mt-5">
+    <div class="card-body p-4">
+        <h1 class="card-title mb-3 text-primary fw-bold">Sobre mí</h1>
+        
+        <p class="lead text-muted">
             ¡Bienvenido a mi página creada con <strong>Django</strong>!<br>
             Soy <strong>Martín Verniere</strong>, nacido en Bahía Blanca, Argentina, y tengo 26 años.
-            Me interesa mucho la tecnología y la computacion, y por eso decidí inscribirme en el curso de Python en Coderhouse:
-            para seguir aprendiendo, perfeccionar mis habilidades y crear proyectos cada vez más complejos.
         </p>
 
-        <hr>
+        <p>
+            Me apasiona la <strong>tecnología</strong> y la <strong>computación</strong>. 
+            Por eso decidí inscribirme en el curso de <strong>Python en Coderhouse</strong>: 
+            para seguir aprendiendo, perfeccionar mis habilidades y desarrollar proyectos cada vez más desafiantes.
+        </p>
 
-        <h5>Intereses</h5>
-        <ul>
-            <li>Computacion</li>
-            <li>Futbol</li>
+        <hr class="my-4">
+
+        <h5 class="fw-semibold text-secondary">Mis intereses</h5>
+        <ul class="mt-3 ps-3">
+            <li class="mb-2">💻 Computación</li>
+            <li class="mb-2">⚽ Fútbol</li>
         </ul>
     </div>
 </div>
