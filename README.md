@@ -8,7 +8,7 @@ Este es el proyecto final realizado para el curso de Python en Coderhouse.
 
 - Luego ejecutar el comando "./myenv/scripts/Activate" en la consola, para activar el ambiente (si funciona bien se mostrara en la consola (myenv) , indicando que estamos ejecutando nuestros comandos dentro del ambiente virtual)
 
-- Estando en el ambiente virtual, proceder a ejecutar el comando "pip install -m requirements.txt", para instalar los paquetes necesarios que indica el archivo requirements.txt.
+- Estando en el ambiente virtual, proceder a ejecutar el comando "pip install -r requirements.txt", para instalar los paquetes necesarios que indica el archivo requirements.txt.
 
 - Luego de instalar los paquetes, para ejecutar la aplicacion en un servidor local debe ejecutar en la consola el comando "python manage.py runserver", y se podra ingresar al programa utilizando localhost en el navegador
 
