@@ -4,7 +4,7 @@ Este es el proyecto final realizado para el curso de Python en Coderhouse.
 ## Pasos para ejecutar el proyecto
 - Obtener el archivo desde el repositorio en Github(https://github.com/MartinVerniere/curso-coderhouse-entrega-final)
 
-- Estando parados en la carpeta principal del proyecto (donde se encuentran "myapp" y "Entrega Final"), ejecutar el comando "python -m venv myenv" para crear un ambiente virtual en la carpeta actual
+- Estando parados en la carpeta principal del proyecto (donde se encuentran "myapp" y "Entrega Final"), ejecutar el comando "python -m venv myenv" en la terminal, para crear un ambiente virtual en la carpeta actual.
 
 - Luego ejecutar el comando "./myenv/scripts/Activate" en la consola, para activar el ambiente (si funciona bien se mostrara en la consola (myenv) , indicando que estamos ejecutando nuestros comandos dentro del ambiente virtual)
 
