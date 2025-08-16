@@ -4,9 +4,11 @@ Este es el proyecto final realizado para el curso de Python en Coderhouse.
 ## Pasos para ejecutar el proyecto
 - Obtener el archivo desde el repositorio en Github(https://github.com/MartinVerniere/curso-coderhouse-entrega-final)
 
-- Estando parados en la carpeta principal del proyecto (donde se encuentran "myapp" y "Entrega Final"), ejecutar el comando "./myenv/scripts/Activate"
+- Estando parados en la carpeta principal del proyecto (donde se encuentran "myapp" y "Entrega Final"), ejecutar el comando "python -m venv myenv" para crear un ambiente virtual en la carpeta actual
 
-- Estando en el ambiente virtual, proceder a ejecutar el comando "pip install -m requirements.txt", para instalar los paquetes necesarios
+- Luego ejecutar el comando "./myenv/scripts/Activate" en la consola, para activar el ambiente (si funciona bien se mostrara en la consola (myenv) , indicando que estamos ejecutando nuestros comandos dentro del ambiente virtual)
+
+- Estando en el ambiente virtual, proceder a ejecutar el comando "pip install -m requirements.txt", para instalar los paquetes necesarios que indica el archivo requirements.txt.
 
 - Luego de instalar los paquetes, para ejecutar la aplicacion en un servidor local debe ejecutar en la consola el comando "python manage.py runserver", y se podra ingresar al programa utilizando localhost en el navegador
 
