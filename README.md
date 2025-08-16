@@ -10,6 +10,8 @@ Este es el proyecto final realizado para el curso de Python en Coderhouse.
 
 - Estando en el ambiente virtual, proceder a ejecutar el comando "pip install -r requirements.txt", para instalar los paquetes necesarios que indica el archivo requirements.txt.
 
+- Antes de ejecutar la aplicacion, se debe primero en la terminar ejecutar el comando "python manage.py migrate", para generar las migraciones para la base de datos.
+
 - Luego de instalar los paquetes, para ejecutar la aplicacion en un servidor local debe ejecutar en la consola el comando "python manage.py runserver", y se podra ingresar al programa utilizando localhost en el navegador
 
 ## Probar la app de Django
