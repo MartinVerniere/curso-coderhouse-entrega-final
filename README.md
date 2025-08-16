@@ -44,3 +44,6 @@ Este es el proyecto final realizado para el curso de Python en Coderhouse.
 ## Adicionales
 - Por como esta realizado el formulario de creacion/actualizacion, la imagen cargada no se podra ver en ese momento, sino que se actualizara cuando se guarden los cambios y se quiera ver la imagen en detalles o actualizar.
 - Por como esta realizado el formulario de editar perfil, si se quiere cambiar alguno de los datos del usuario, se debe volver a reescribir la contraseña a utilizar (o si se quiere se puede editarla tambien), el campo no puede quedar vacio en el formulario.
+
+## Video pasos a seguir
+[![Watch the video](https://via.placeholder.com/600x400.png?text=Click+to+Watch)](./video-explicacion.mp4)
